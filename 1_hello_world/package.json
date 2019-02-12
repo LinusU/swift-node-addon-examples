@@ -1,0 +1,10 @@
+{
+  "name": "hello_world",
+  "version": "0.0.0",
+  "main": "hello.js",
+  "private": true,
+  "scripts": {
+    "test": "node hello.js",
+    "postinstall": "swift build -c release -Xlinker -undefined -Xlinker dynamic_lookup && mv .build/release/libHelloWorld.dylib .build/release/HelloWorld.node"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "callbacks",
+  "version": "0.0.0",
+  "main": "addon.js",
+  "private": true,
+  "scripts": {
+    "test": "node addon.js",
+    "postinstall": "swift build -c release -Xlinker -undefined -Xlinker dynamic_lookup && mv .build/release/libCallbacks.dylib .build/release/Callbacks.node"
+  }
+}

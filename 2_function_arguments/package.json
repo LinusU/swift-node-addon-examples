@@ -1,0 +1,10 @@
+{
+  "name": "function_arguments",
+  "version": "0.0.0",
+  "main": "addon.js",
+  "private": true,
+  "scripts": {
+    "test": "node addon.js",
+    "postinstall": "swift build -c release -Xlinker -undefined -Xlinker dynamic_lookup && mv .build/release/libFunctionArguments.dylib .build/release/FunctionArguments.node"
+  }
+}
